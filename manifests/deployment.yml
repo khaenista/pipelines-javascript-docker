@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: khaenistapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: khaenistapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: khaenistapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: khaenistapipelinesjavascriptdocker 
+          image: pro690registry.azurecr.io/khaenistapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
